@@ -23,8 +23,8 @@ module extrusion_cutout(h, extra, cut_w=2, cut_d=2, corner_r=0.5) {
 }
 
 module screw_socket() {
- cylinder(r=m3_wide_radius, h=20, center=true);
- translate([0, 0, 3.8]) cylinder(r=3.5, h=8);
+ cylinder(r=m5_wide_radius, h=20, center=true);
+ translate([0, 0, 3.8]) cylinder(r=m5_cap_radius, h=8);
 }
 
 module screw_socket_cone() {

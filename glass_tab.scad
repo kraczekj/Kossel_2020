@@ -47,8 +47,8 @@ module glass_tab2(tab_thickness=3, tab_d=extrusion*1.5){
       }
      }
     }  
-    translate([extrusion,0,-3]) cylinder(h=extrusion*2, r=m3_radius, center=true);
-    translate([-extrusion,0,-3]) cylinder(h=extrusion*2, r=m3_radius, center=true);
+    translate([extrusion,0,-3]) cylinder(h=extrusion*2, r=m5_radius, center=true);
+    translate([-extrusion,0,-3]) cylinder(h=extrusion*2, r=m5_radius, center=true);
   }
 }
 
