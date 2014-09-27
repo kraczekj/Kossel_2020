@@ -30,7 +30,7 @@ module screw_socket() {
 module screw_socket_cone() {
  union() {
   screw_socket();
-  scale([1, 1, -1]) rotate(45)cylinder(r1=11/2*sqrt(2), r2=extrusion/2, h=5.5, $fn=4);
+ scale([1, 2, -1]) rotate(45)cylinder(r1=11/2*sqrt(2), r2=extrusion/2, h=5.5, $fn=4);
  }
 }
 
@@ -52,28 +52,28 @@ module vertex(height, idler_offset, idler_space, fin_w=5, fin_d, fins=0, fn=180)
     if(fins > 0){
       translate([29.5,35,(height-extrusion)/2]) rotate([0,0,60])  
         difference(){ 
-          fin(54,fin_d,fin_w+1);
-          translate([-22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
-          translate([22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
+          fin(54,fin_d,fin_w+2);
+          translate([-16,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
+          translate([18,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
       }
       translate([29.5,35,-(height-extrusion)/2]) rotate([0,0,60]) 
       difference(){ 
-          fin(54,fin_d,fin_w+1);
-          translate([-22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
-          translate([22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
+          fin(54,fin_d,fin_w+2);
+          translate([-16,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
+          translate([18,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
       }
       translate([-29.5,35,(height-extrusion)/2]) rotate([0,0,-60]) 
       difference(){ 
-          fin(54,fin_d,fin_w+1);
-          translate([-22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
-          translate([22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
+          fin(54,fin_d,fin_w+2);
+          translate([-18,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
+          translate([16,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
       }
       
       translate([-29.5,35,-(height-extrusion)/2]) rotate([0,0,-60]) 
       difference(){ 
-          fin(54,fin_d,fin_w+1);
-          translate([-22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
-          translate([22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
+          fin(54,fin_d,fin_w+2);
+          translate([-18,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
+          translate([16,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
       }
     }
     intersection() {
@@ -116,7 +116,7 @@ module vertex(height, idler_offset, idler_space, fin_w=5, fin_d, fins=0, fn=180)
      rotate([0, 0, 30*a]) translate([-(vertex_radius-body1_cylinder_offset)*a, 111, z]) {
       // % rotate([90, 0, 0]) extrusion_cutout(200, 0);
       // Screw sockets.
-      for (y = [-88, -44]) {
+      for (y = [-82, -48]) {
        translate([a*(extrusion/2-0.6), y, 0]) rotate([0, a*90, 0]) screw_socket();
       }
      

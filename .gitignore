@@ -1,6 +1,8 @@
 #################
 ## Eclipse
 #################
+*.stl
+*.gcode
 
 *.pydevproject
 .project
