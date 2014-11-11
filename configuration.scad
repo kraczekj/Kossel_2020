@@ -1,5 +1,5 @@
 // Increase this if your slicer or printer make holes too tight.
-extra_radius = 0.25;
+extra_radius = 0.5;
 
 // OD = outside diameter, corner to corner.
 m3_nut_od = 6.1; //6.1 for 1515
@@ -14,7 +14,7 @@ m3_wide_radius = m3_major/2 + extra_radius + 0.2;
 
 
 m5_nut_od = 8; 
-m5_nut_radius = m5_nut_od/2 + 0.2 + extra_radius;
+m5_nut_radius = m5_nut_od/2 + 0.5 + extra_radius;
 m5_washer_radius = 3.5 + extra_radius;
 
 // Major Diameter of metric 5mm thread
