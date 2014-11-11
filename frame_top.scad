@@ -24,6 +24,7 @@ module frame_top() {
   }
 }
 
+projection()
 difference(){
   translate([0, 0, extrusion/2]) frame_top();
   //translate([0,6,22/2])cube([5.5,4,24],center=true);
